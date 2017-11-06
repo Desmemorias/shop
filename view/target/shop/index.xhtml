@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head></h:head>
+<h:body>
+
+<h:form>
+    <p:panel header="Створення товару">
+<p:panelGrid columns="2">
+    <p:column>
+        <p:inputText value="#{orderBean.name}"/>
+    </p:column>
+    <p:column>
+        <p:inputText value="#{orderBean.quantity}"/>
+    </p:column>
+
+    <p:column>
+Назва товару
+    </p:column>
+<p:column>
+Ціна
+</p:column>
+    <p:column>
+        <p:commandButton value="Створити товар" action="#{orderBean.createItem()}" update="created"/>
+
+    </p:column>
+    <p:column>
+        <p:commandButton value="Створити замовлення" action="#{orderBean.createOrder()}"/>
+
+    </p:column>
+</p:panelGrid>
+    </p:panel>
+<p:panel header="Створені товари">
+    <p:dataTable value="#{orderBean.items}" var="item" id="created">
+        <p:column>
+            <h:outputText value="#{item.name}"/>
+        </p:column>
+
+        <p:column>
+            <h:outputText value="#{item.quantity}"/>
+        </p:column>
+        <p:column>
+            <p:commandButton value="Додати" action="#{orderBean.addItem(item)}" update="addedItems"/>
+        </p:column>
+    </p:dataTable>
+
+</p:panel>
+</h:form>
+
+    <p:panel header="Додані товари" id="addedItems" >
+        <p:dataTable value="#{orderBean.itemsInOrder}" var="item">
+            <p:column>
+                <h:outputText value="#{item.name}"/>
+            </p:column>
+            <p:column>
+                <h:outputText value="#{item.quantity}"/>
+            </p:column>
+
+        </p:dataTable>
+
+    </p:panel>
+ </h:body>
+</html>

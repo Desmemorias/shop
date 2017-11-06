@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="javaeeApplication" name="JavaEE">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="application.xml" url="file://$MODULE_DIR$/target/application.xml" />
+        </descriptors>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: ua.imba:logic:ejb:1.0-SNAPHOT" level="project" />
+    <orderEntry type="module" module-name="logic" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.1" level="project" />
+    <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter-api:5.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.opentest4j:opentest4j:1.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.junit.platform:junit-platform-commons:1.0.1" level="project" />
+    <orderEntry type="module" module-name="view" />
+    <orderEntry type="library" name="Maven: org.primefaces:primefaces:5.3" level="project" />
+  </component>
+</module>

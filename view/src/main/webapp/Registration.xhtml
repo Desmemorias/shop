@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="http://primefaces.org/ui">
+<body>
+<h:head></h:head>
+<h:form>
+    <p:dialog header="Реєстрація" widgetVar="dlg2" modal="true" visible="true" closable="false">
+        <h:outputText value="Введіть облікові данні." />
+
+    <h:panelGrid columns="2" cellpadding="5">
+        <h:outputText value="Поштова скринька: " />
+        <p:inputText value="#{credentialsBean.email}" />
+    </h:panelGrid>
+
+    <p:spacer height="10" />
+
+    <p:separator />
+
+    <p:messages id="messages" showDetail="true" autoUpdate="true" />
+
+    <h:panelGrid columns="2" id="matchGrid" cellpadding="5">
+        <h:outputLabel for="pwd1" value="Пароль" />
+        <p:password id="pwd1" value="#{credentialsBean.password}" match="pwd2" label="Password 1" required="true" />
+
+        <h:outputLabel for="pwd2" value="Підтвердження" />
+        <p:password id="pwd2" value="#{credentialsBean.password}" label="Password 2" required="true" />
+    </h:panelGrid>
+
+    <p:commandButton update="matchGrid" value="Зареєструватись" action="#{credentialsBean.createCredentials()}"  />
+    </p:dialog>
+</h:form>
+</body>
+</html>
