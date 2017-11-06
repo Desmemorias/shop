@@ -20,8 +20,7 @@ import java.util.List;
 public class OrdersManagerBean {
     @PersistenceContext(unitName = "examplePU")
     private EntityManager entityManager;
-    pr
-
+    private enum lol{lolec, lolce1}
     public Order createOrder ()
     {
     Order order = new Order();
