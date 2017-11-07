@@ -20,7 +20,7 @@ import java.util.List;
 public class OrdersManagerBean {
     @PersistenceContext(unitName = "examplePU")
     private EntityManager entityManager;
-  
+
     public Order createOrder ()
     {
     Order order = new Order();

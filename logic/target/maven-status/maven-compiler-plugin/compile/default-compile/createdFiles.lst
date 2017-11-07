@@ -1,0 +1,10 @@
+ua\imba\ejb\CredentialsManagerBean.class
+ua\imba\domain\ItemInOrder.class
+ua\imba\auth\ejb\AuthenticationManager.class
+ua\imba\ejb\OrdersManagerBean.class
+ua\imba\auth\domain\ShopUser$Role.class
+ua\imba\auth\domain\Credentials.class
+ua\imba\domain\Item.class
+ua\imba\domain\Order.class
+ua\imba\ejb\ItemsManagerBean.class
+ua\imba\auth\domain\ShopUser.class
